@@ -166,3 +166,112 @@ img {
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
+/* ===========================
+   Responsive Styles
+=========================== */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  /* Hero Section */
+  .hero-container {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  /* Contact page plane image */
+  .contact-header-flex {
+    flex-direction: column !important;
+  }
+
+  .contact-plane-img {
+    height: 120px !important;
+  }
+
+  /* Digital wellbeing floating image fix */
+  .digital-intro-row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .digital-image-wrapper {
+    float: none !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto 1.5rem !important;
+  }
+
+  /* Services insurance section padding */
+  .insurance-section-inner {
+    padding: 1.5rem !important;
+  }
+
+  /* Footer grid */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}

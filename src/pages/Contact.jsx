@@ -53,10 +53,11 @@ const Contact = () => {
             <section className="section">
                 <div className="container">
                     <div className="text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'center', marginBottom: '1rem' }}>
+                        <div className="contact-header-flex" style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'center', marginBottom: '1rem' }}>
                             <img
                                 src={planeImg}
                                 alt=""
+                                className="contact-plane-img"
                                 style={{
                                     height: '210px',
                                     width: 'auto',

@@ -11,12 +11,15 @@ const DigitalWellBeing = () => {
             marginBottom: '0.5rem',
             color: 'var(--color-text)',
         },
+        introRow: {
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '2rem',
+            alignItems: 'flex-start',
+        },
         imageWrapper: {
             width: '300px',
-            float: 'right',
-            marginLeft: '2rem',
-            marginTop: '0', // Reset margin
-            marginBottom: '1rem',
+            flexShrink: 0,
             borderRadius: 'var(--radius-md)',
             overflow: 'hidden',
             boxShadow: 'var(--shadow-lg)',
@@ -26,9 +29,6 @@ const DigitalWellBeing = () => {
             height: 'auto',
             display: 'block',
         },
-        clearfix: {
-            clear: 'both',
-        }
     };
 
     return (
@@ -39,15 +39,19 @@ const DigitalWellBeing = () => {
                     <h1 style={{ marginBottom: '1.5rem' }}>Akademik Çalışmalarım</h1>
 
                     <div style={{ marginTop: '3rem' }}>
-                        <div style={styles.imageWrapper}>
-                            <img src={digitalImg} alt="Dijital İyi Oluş" style={styles.profileImage} />
+                        <div className="digital-intro-row" style={styles.introRow}>
+                            <div className="digital-image-wrapper" style={styles.imageWrapper}>
+                                <img src={digitalImg} alt="Dijital İyi Oluş" style={styles.profileImage} />
+                            </div>
+                            <div>
+                                <p style={{ marginBottom: '1rem' }}>
+                                    Dijital teknolojiler, gündelik yaşamın ayrılmaz bir parçası hâline gelirken, bireylerin psikolojik iyi oluşu ve ilişkileri üzerinde de belirleyici bir rol oynamaktadır. Dijital iyi oluş, teknolojiyi dışlamak değil; bireyin ihtiyaçlarını, sınırlarını ve ilişkisel bağlamını gözeterek dijital dünyayla daha dengeli bir ilişki kurabilmesini ifade eder.
+                                </p>
+                                <p style={{ marginBottom: '1.5rem' }}>
+                                    Bugüne kadar yaptığım akademik çalışmalar, dijital ortamların duygusal deneyimler, ilişkisel örüntüler ve gelişimsel süreçler üzerindeki etkilerini ele almaktadır. Akademik üretimin yalnızca akademik çevrelerle sınırlı kalmaması; klinik uygulama, ebeveynlik pratikleri ve eğitim ortamlarında karşılık bulmasını önemsiyorum. Özellikle dijital çağda ebeveynlik odağında, okul ve aile temelli önleyici ve güçlendirici yaklaşımlara zemin oluşturmayı hedeflemekteyim.Bu konu ile ilgili seminer, eğitim ve atölyeler için benimle iletişime geçebilirsiniz.
+                                </p>
+                            </div>
                         </div>
-                        <p style={{ marginBottom: '1rem' }}>
-                            Dijital teknolojiler, gündelik yaşamın ayrılmaz bir parçası hâline gelirken, bireylerin psikolojik iyi oluşu ve ilişkileri üzerinde de belirleyici bir rol oynamaktadır. Dijital iyi oluş, teknolojiyi dışlamak değil; bireyin ihtiyaçlarını, sınırlarını ve ilişkisel bağlamını gözeterek dijital dünyayla daha dengeli bir ilişki kurabilmesini ifade eder.
-                        </p>
-                        <p style={{ marginBottom: '1.5rem' }}>
-                            Bugüne kadar yaptığım akademik çalışmalar, dijital ortamların duygusal deneyimler, ilişkisel örüntüler ve gelişimsel süreçler üzerindeki etkilerini ele almaktadır. Akademik üretimin yalnızca akademik çevrelerle sınırlı kalmaması; klinik uygulama, ebeveynlik pratikleri ve eğitim ortamlarında karşılık bulmasını önemsiyorum. Özellikle dijital çağda ebeveynlik odağında, okul ve aile temelli önleyici ve güçlendirici yaklaşımlara zemin oluşturmayı hedeflemekteyim.Bu konu ile ilgili seminer, eğitim ve atölyeler için benimle iletişime geçebilirsiniz.
-                        </p>
 
                         <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Kitap Bölümü</h3>
                         <ul style={styles.credentialList}>
@@ -87,7 +91,6 @@ const DigitalWellBeing = () => {
                             </li>
                         </ul>
                     </div>
-                    <div style={styles.clearfix}></div>
                 </div>
             </section>
         </div>

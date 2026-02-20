@@ -89,12 +89,31 @@ const Home = () => {
 
     return (
         <div className="animate-fade-in">
+            {/* Responsive overrides */}
+            <style>{`
+              @media (max-width: 1024px) {
+                .hero-title { font-size: 2.75rem !important; }
+                .hero-subtitle { font-size: 1.1rem !important; }
+              }
+              @media (max-width: 768px) {
+                .hero-section { padding: 5rem 0 3rem !important; min-height: auto !important; }
+                .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; text-align: center; }
+                .hero-title { font-size: 2rem !important; }
+                .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.75rem !important; }
+                .hero-image-wrapper { max-width: 280px !important; margin: 0 auto !important; transform: none !important; }
+              }
+              @media (max-width: 480px) {
+                .hero-title { font-size: 1.75rem !important; }
+                .hero-image-wrapper { max-width: 240px !important; }
+              }
+            `}</style>
+
             {/* Hero Section */}
-            <section style={styles.hero}>
-                <div className="container" style={styles.heroContainer}>
+            <section className="hero-section" style={styles.hero}>
+                <div className="container hero-grid" style={styles.heroContainer}>
                     <div style={styles.heroContent}>
-                        <h1 style={styles.heroTitle}></h1>
-                        <p style={styles.heroSubtitle}>
+                        <h1 className="hero-title" style={styles.heroTitle}></h1>
+                        <p className="hero-subtitle" style={styles.heroSubtitle}>
                             Hayatta bazı dönemlerde ilişkiler karmaşıklaşabilir, duygular yoğunlaşabilir ve bildiğimiz baş etme yolları yeterli gelmeyebilir. Psikolojik danışmanlık süreci, bu yaşantıların acele edilmeden ele alındığı; kişinin kendini, ilişkilerini ve tekrar eden örüntülerini daha yakından fark edebileceği bir alan sunar. Bu çalışma, hazır çözümlerden çok, yaşantıyı anlamaya ve ona eşlik etmeye odaklanır.
                         </p>
                         <div>
@@ -104,7 +123,7 @@ const Home = () => {
                         </div>
                     </div>
                     {/* Hero Image */}
-                    <div style={styles.heroImageWrapper}>
+                    <div className="hero-image-wrapper" style={styles.heroImageWrapper}>
                         <img src={profileImg} alt="Selin Ayas" style={styles.heroImage} />
                     </div>
                 </div>

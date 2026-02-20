@@ -65,6 +65,11 @@ const Services = () => {
 
     return (
         <div className="animate-fade-in" style={{ paddingTop: '6rem' }}>
+            <style>{`
+              @media (max-width: 768px) {
+                .insurance-section { padding: 1.5rem !important; }
+              }
+            `}</style>
             <section className="section">
                 <div className="container">
                     <div className="text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -87,7 +92,7 @@ const Services = () => {
                         ))}
                     </div>
 
-                    <div style={styles.insuranceSection}>
+                    <div className="insurance-section" style={styles.insuranceSection}>
                         <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Ödeme ve Sigorta</h2>
                         <p style={{ marginBottom: '1.5rem' }}>
                             Ödemeler genellikle seans öncesinde veya sonrasında alınır. Özel sağlık sigortanız varsa, geri ödeme alabilmeniz için gerekli faturayı (SMM) düzenleyebilirim. Lütfen sigorta şirketinizle kapsamınızı kontrol ediniz.

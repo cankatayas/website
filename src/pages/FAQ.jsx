@@ -139,10 +139,25 @@ const FAQ = () => {
 
     return (
         <div className="animate-fade-in" style={styles.container}>
+            <style>{`
+              @media (max-width: 1024px) {
+                .faq-title { font-size: 2.4rem !important; }
+                .faq-question-btn { padding: 1.25rem 1.5rem !important; }
+              }
+              @media (max-width: 768px) {
+                .faq-title { font-size: 1.9rem !important; }
+                .faq-inner { padding: 0 !important; }
+                .faq-question-btn { padding: 1rem 1.25rem !important; }
+                .faq-answer-open { padding: 0 1.25rem 1.5rem 1.25rem !important; }
+              }
+              @media (max-width: 480px) {
+                .faq-title { font-size: 1.65rem !important; }
+              }
+            `}</style>
             <div className="container">
                 <div style={styles.innerContainer}>
                     <div style={styles.header}>
-                        <h1 style={styles.title}>Sıkça Sorulan Sorular</h1>
+                        <h1 className="faq-title" style={styles.title}>Sıkça Sorulan Sorular</h1>
                         <p style={styles.subtitle}>
                             Psikolojik danışmanlık süreci ile ilgili merak ettiğiniz bazı soruları ve cevapları aşağıda bulabilirsiniz.
                         </p>

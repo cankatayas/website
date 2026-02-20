@@ -122,15 +122,19 @@ const FAQ = () => {
             backgroundColor: 'var(--color-primary-dark)',
         },
         answerWrapper: {
-            maxHeight: 0,
-            overflow: 'hidden',
-            transition: 'max-height 0.4s ease, padding 0.4s ease',
+            display: 'grid',
+            gridTemplateRows: '0fr',
+            transition: 'grid-template-rows 0.3s ease',
         },
         answerWrapperOpen: {
-            maxHeight: '1000px',
-            padding: '0 2rem 2rem 2rem',
+            gridTemplateRows: '1fr',
+        },
+        answerInner: {
+            overflow: 'hidden',
+            minHeight: 0,
         },
         answer: {
+            padding: '0 2rem 1.75rem 2rem',
             lineHeight: '1.8',
             color: 'var(--color-text)',
             fontSize: '1rem',
@@ -192,7 +196,9 @@ const FAQ = () => {
                                         ...styles.answerWrapper,
                                         ...(isOpen ? styles.answerWrapperOpen : {})
                                     }}>
-                                        <p style={styles.answer}>{faq.answer}</p>
+                                        <div style={styles.answerInner}>
+                                            <p style={styles.answer}>{faq.answer}</p>
+                                        </div>
                                     </div>
                                 </div>
                             );
